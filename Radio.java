@@ -1,4 +1,4 @@
-public interface Radio{
+public interface Radio {
 
     public void toggle();
     public boolean getState();
