@@ -52,7 +52,7 @@ public class CarRadio implements Radio {
             this.currentStationAM=this.currentStationAM+amIncrease;
         }
         else if (!up && !isFM){
-            this.currentStationAM=this.currentStationAM+amIncrease;
+            this.currentStationAM=this.currentStationAM-amIncrease;
         }
 
     }
@@ -64,7 +64,12 @@ public class CarRadio implements Radio {
 
     @Override
     public void saveStation(int numButton) {
-
+        if (isFM){
+            savedStationsFM[numButton]=currentStationFM;
+        }
+        else{
+            savedStationsAM[numButton]=currentStationAM;
+        }
     }
 
     @Override
@@ -74,6 +79,11 @@ public class CarRadio implements Radio {
 
     @Override
     public double getStation() {
-        return 0;
+        if (isFM){
+            return currentStationFM;
+        }
+        else{
+            return currentStationAM;
+        }
     }
 }
