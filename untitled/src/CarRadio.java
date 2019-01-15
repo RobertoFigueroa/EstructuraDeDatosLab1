@@ -8,12 +8,12 @@ public class CarRadio implements Radio {
     private double currentStationAM;
     private double[] savedStationsFM;
     private double[] savedStationsAM;
-    public static final double minFM = 87.9;
-    public static final double maxFM = 107.9;
-    public static final double minAM = 530;
-    public static final double maxAM = 1610;
-    public static final double fmIncrease=0.2;
-    public static final double amIncrease=10;
+    private static final double minFM = 87.9;
+    private static final double maxFM = 107.9;
+    private static final double minAM = 530;
+    private static final double maxAM = 1610;
+    private static final double fmIncrease=0.2;
+    private static final double amIncrease=10;
 
     //Constructor
     public CarRadio() {
@@ -44,15 +44,27 @@ public class CarRadio implements Radio {
     public void changeStation(boolean up) {
         if (up && isFM){
             this.currentStationFM=this.currentStationFM+fmIncrease;
+            if (currentStationFM> maxFM){
+                this.currentStationFM=minFM;
+            }
         }
         else if (!up && isFM){
             this.currentStationFM=this.currentStationFM-fmIncrease;
+            if (this.currentStationFM< minFM){
+                this.currentStationFM=maxFM;
+            }
         }
         else if (up && !isFM){
             this.currentStationAM=this.currentStationAM+amIncrease;
+            if (this.currentStationAM> maxAM){
+                this.currentStationAM=minAM;
+            }
         }
-        else if (!up && !isFM){
+        else{
             this.currentStationAM=this.currentStationAM-amIncrease;
+            if (this.currentStationAM < minAM){
+                this.currentStationAM=maxAM;
+            }
         }
 
     }
@@ -65,16 +77,21 @@ public class CarRadio implements Radio {
     @Override
     public void saveStation(int numButton) {
         if (isFM){
-            savedStationsFM[numButton]=currentStationFM;
+            savedStationsFM[numButton-1]=currentStationFM;
         }
         else{
-            savedStationsAM[numButton]=currentStationAM;
+            savedStationsAM[numButton-1]=currentStationAM;
         }
     }
 
     @Override
     public void changeStationButton(int numButton) {
-
+        if (isFM){
+            this.currentStationFM=savedStationsFM[numButton-1];
+        }
+        else{
+            this.currentStationAM=savedStationsAM[numButton-1];
+        }
     }
 
     @Override
