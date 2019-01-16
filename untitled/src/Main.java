@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public Main{
-    Scanner sc = new Scaner(System.in);
+    Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
         Scanner sc = new Scaner(System.in);
         Radio radio = new CarRadio();
