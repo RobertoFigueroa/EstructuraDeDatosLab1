@@ -6,8 +6,7 @@ public class CarRadio implements Radio {
     private boolean isFM;
     private double currentStationFM;
     private double currentStationAM;
-    private double[] savedStationsFM;
-    private double[] savedStationsAM;
+    private double[] savedStations;
     private static final double minFM = 87.9;
     private static final double maxFM = 107.9;
     private static final double minAM = 530;
@@ -21,8 +20,7 @@ public class CarRadio implements Radio {
         this.isFM = true;
         this.currentStationFM = 87.9;
         this.currentStationAM = 530;
-        this.savedStationsFM= new double[12];
-        this.savedStationsAM= new double[12];
+        this.savedStations= new double[12];
     }
 
     @Override
@@ -77,20 +75,23 @@ public class CarRadio implements Radio {
     @Override
     public void saveStation(int numButton) {
         if (isFM){
-            savedStationsFM[numButton-1]=currentStationFM;
+            savedStations[numButton-1]=currentStationFM;
         }
         else{
-            savedStationsAM[numButton-1]=currentStationAM;
+            savedStations[numButton-1]=currentStationAM;
         }
     }
 
     @Override
     public void changeStationButton(int numButton) {
-        if (isFM){
-            this.currentStationFM=savedStationsFM[numButton-1];
+        double stationToGet= this.savedStations[numButton-1];
+        if (stationToGet<maxFM && stationToGet>minFM){
+            this.isFM=true;
+            this.currentStationFM=stationToGet;
         }
-        else{
-            this.currentStationAM=savedStationsAM[numButton-1];
+        else if (stationToGet<maxAM && stationToGet>minAM){
+            this.isFM=false;
+            this.currentStationAM=stationToGet;
         }
     }
 
