@@ -1,39 +1,53 @@
 import java.util.Scanner;
-public Main{
-    Scanner sc = new Scanner(System.in);
+public class  Main {
+
     public static void main(String[] args){
-        Scanner sc = new Scaner(System.in);
+        Scanner sc = new Scanner(System.in);
         Radio radio = new CarRadio();
 
-        System.out.println("Menu: \n 1.Prender \n 2.Cambiar frecuencia \n 3.Avanzar dial \n 4.Retroceder dial \n 5.Guarda emisora \n 6. Apagar");
+        System.out.println("Menu: \n 1.Prender/Apagar \n 2.Cambiar frecuencia \n 3.Avanzar dial \n 4.Retroceder dial \n 5.Guarda emisora ");
         System.out.print("Ingrese una opcion -------> ");
         int opt = sc.nextInt();
 
         switch(opt){
             case 1: //prender el radio
-
+                radio.toggle();
             break;
             case 2: //cambiar frecuencia
-
+                radio.changeFrequency();
             break;
             case 3: //avanzar dial
-
+                radio.changeStation(true);
             break;
             case 4: //retroceder dial
-
+                radio.changeStation(false);
             break;
             case 5: //guardar emisora
-
+                System.out.print("Ingrese un numero (del 1 al 12)  para guardar la emisora: --- >");
+                int num = sc.nextInt();
+                try{
+                    radio.saveStation(num);
+                    System.out.println("Guardada con exito!");
+                }
+                catch(ArrayIndexOutOfBoundsException e){
+                    System.out.println("Numero fuera de rango, intente de nuevo!");
+                }
             break;
-            case 6:  //apagar radio
-
-            break;
-
-
-
+            case 6:
+                System.out.println("Ingrese un numero dentro del rango de opciones");
+             break;
         }
-
-
-
+        if(!radio.getState()){
+            System.out.println(" ___________________________________________________________");
+            System.out.println("|   Off                                                    |");
+            System.out.println(" ___________________________________________________________");
+        }
+        else{
+            System.out.println(" ___________________________________________________________");
+            System.out.println("   On                                                    ");
+             System.out.println("|   "+ radio.getFrequency()+"                             |");
+        System.out.println("|   "+ radio.getStation() +"                                                   |");
+            System.out.println(" ___________________________________________________________");
+        }
         }
         }
