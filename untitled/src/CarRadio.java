@@ -85,11 +85,11 @@ public class CarRadio implements Radio {
     @Override
     public void changeStationButton(int numButton) {
         double stationToGet= this.savedStations[numButton-1];
-        if (stationToGet<maxFM && stationToGet>minFM){
+        if (stationToGet<=maxFM && stationToGet>=minFM){
             this.isFM=true;
             this.currentStationFM=stationToGet;
         }
-        else if (stationToGet<maxAM && stationToGet>minAM){
+        else if (stationToGet<=maxAM && stationToGet>=minAM){
             this.isFM=false;
             this.currentStationAM=stationToGet;
         }
