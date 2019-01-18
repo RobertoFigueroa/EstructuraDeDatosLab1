@@ -6,7 +6,7 @@ public class  Main {
         Radio radio = new CarRadio();
         radio.toggle();
         while(radio.getState()==true) {
-            System.out.println("Menu: \n 1.Prender/Apagar \n 2.Cambiar frecuencia \n 3.Avanzar dial \n 4.Retroceder dial \n 5.Guarda emisora ");
+            System.out.println("Menu: \n 1.Prender/Apagar \n 2.Cambiar frecuencia \n 3.Avanzar dial \n 4.Retroceder dial \n 5.Guarda emisora \n 6.Cambiar dial con boton");
             System.out.print("Ingrese una opcion -------> ");
             int opt = sc.nextInt();
 
@@ -33,9 +33,16 @@ public class  Main {
                         System.out.println("Numero fuera de rango, intente de nuevo!");
                     }
                     break;
-                case 6:
+                case 6: //cambiar con boton el dial
                     System.out.println("Ingrese el numero del boton :  ");
                     int btn = sc.nextInt();
+                    try{
+                        radio.changeStationButton(btn);
+                        System.out.println();
+                    }
+                    catch (ArrayIndexOutOfBoundsException e){
+                        System.out.println("Numero fuera de rango!");
+                    }
 
                 break;
                 default:
