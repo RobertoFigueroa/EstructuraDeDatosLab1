@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fde7bf-5454-4383-a036-565b7aa87ffa" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/untitled/src/CarRadio.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled/src/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled/src/Radio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Radio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/CarRadio.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/CarRadio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/Radio.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +24,8 @@
       <file leaf-file-name="CarRadio.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/src/CarRadio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+            <state relative-caret-position="224">
+              <caret line="87" column="26" lean-forward="true" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
               <folding>
                 <element signature="e#865#866#0" expanded="true" />
                 <element signature="e#896#897#0" expanded="true" />
@@ -50,8 +43,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untitled/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="530">
+              <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -180,19 +173,19 @@
       <option name="presentableId" value="Default" />
       <updated>1547338597278</updated>
     </task>
-    <task id="LOCAL-00001" summary="Se crearon los metodos de CarRadio">
-      <created>1547488764993</created>
+    <task id="LOCAL-00001" summary="Default Changelist">
+      <created>1547831882661</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1547488764993</updated>
+      <updated>1547831882661</updated>
     </task>
-    <task id="LOCAL-00002" summary="cambios a carro">
-      <created>1547504241026</created>
+    <task id="LOCAL-00002" summary="Cambios a los metodos de Car Radio">
+      <created>1547831930290</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1547504241026</updated>
+      <updated>1547831930290</updated>
     </task>
     <task id="LOCAL-00003" summary="Se terminaron por primera ves los metodos de CarRadio">
       <created>1547504471905</created>
@@ -215,11 +208,11 @@
       <option name="project" value="LOCAL" />
       <updated>1547828822478</updated>
     </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -249,6 +242,11 @@
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <MESSAGE value="Cambios a los metodos de Car Radio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios a los metodos de Car Radio" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/untitled/src/Radio.java">
@@ -416,15 +414,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="530">
+          <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/src/CarRadio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+        <state relative-caret-position="224">
+          <caret line="87" column="26" lean-forward="true" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
           <folding>
             <element signature="e#865#866#0" expanded="true" />
             <element signature="e#896#897#0" expanded="true" />
